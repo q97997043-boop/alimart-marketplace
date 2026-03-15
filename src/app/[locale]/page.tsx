@@ -1,14 +1,14 @@
-import { useTranslations } from "next-intl";
-import { getLocale } from "next-intl/server";
+import  { useTranslations from } "next-intl";
+import  { getLocale } from "next-intl/server";
 import Link from "next/link";
 import { ArrowRight, Zap, TrendingUp, ShieldCheck, Star, Users, Package, CheckCircle } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { HeroSection } from "@/components/marketplace/HeroSection";
-import { FeaturedProducts } from "@/components/marketplace/FeaturedProducts";
-import { CategoryGrid } from "@/components/marketplace/CategoryGrid";
-import { TrendingProducts } from "@/components/marketplace/TrendingProducts";
-import { StatsBar } from "@/components/marketplace/StatsBar";
+import  HeroSection  from "@/components/marketplace/HeroSection";
+import  FeaturedProducts  from "@/components/marketplace/FeaturedProducts";
+import  CategoryGrid  from "@/components/marketplace/CategoryGrid";
+import  TrendingProducts  from "@/components/marketplace/TrendingProducts";
+import  StatsBar  from "@/components/marketplace/StatsBar";
 
 export default async function HomePage() {
   const locale = await getLocale();
