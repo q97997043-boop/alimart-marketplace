@@ -9,7 +9,7 @@ import  FeaturedProducts  from "@/components/marketplace/FeaturedProducts";
 import  CategoryGrid  from "@/components/marketplace/CategoryGrid";
 import  TrendingProducts  from "@/components/marketplace/TrendingProducts";
 import  StatsBar  from "@/components/marketplace/StatsBar";
-
+import SellerCTA from "@/components/marketplace/SellerCTA";
 export default async function HomePage() {
   const locale = await getLocale();
 
