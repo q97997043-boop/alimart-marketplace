@@ -24,6 +24,6 @@ export default getRequestConfig(async ({ locale }) => {
   if (!locales.includes(locale as Locale)) notFound();
 
   return {
-    messages: (await import(`../../public/locales/${locale}/common.json`)).default,
+    messages: (await import(`../../../public/locales/${locale}/common.json`)).default,
   };
 });
