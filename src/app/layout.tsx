@@ -1,6 +1,11 @@
-// This file is intentionally minimal — the real layout is in [locale]/layout.tsx
-// Next.js App Router requires a root layout, but locale detection happens in middleware.
+import { ReactNode } from 'react';
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return children;
+// This layout just wraps children in HTML/Body to satisfy Next.js requirements.
+// The actual styled layout and providers are in [locale]/layout.tsx.
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return (
+    <html>
+      <body>{children}</body>
+    </html>
+  );
 }
