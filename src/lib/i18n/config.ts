@@ -14,16 +14,16 @@ export const countryLocaleMap: Record<string, Locale> = {
 };
 
 export const localeConfig = {
-  en: { label: "English",  flag: "🇺🇸", rtl: false },
-  ru: { label: "Русский",  flag: "🇷🇺", rtl: false },
-  uz: { label: "O'zbek",   flag: "🇺🇿", rtl: false },
-  tr: { label: "Türkçe",   flag: "🇹🇷", rtl: false },
+  en: { label: "English", flag: "🇺🇸", rtl: false },
+  ru: { label: "Русский", flag: "🇷🇺", rtl: false },
+  uz: { label: "O'zbek", flag: "🇺🇿", rtl: false },
+  tr: { label: "Türkçe", flag: "🇹🇷", rtl: false },
 };
 
 export default getRequestConfig(async ({ locale }) => {
   if (!locales.includes(locale as Locale)) notFound();
 
   return {
-    messages: (await import(`../../public/locales/${locale}/common.json`)).default,
+    messages: (await import(`../../../public/locales/${locale}/common.json`)).default,
   };
 });
